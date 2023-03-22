@@ -1,10 +1,10 @@
 
-# Golang-ChatGPT-linebot-Render
-# A Golang ChatGPT linebot project, quickly built on the platform Render
+# Golang-ChatGPT3.5-linebot-Render
+# A Golang ChatGPT/GPT3.5 turbo api linebot project, quickly built on the platform Render
 
 
-### [繁體中文](https://github.com/pyfbsdk59/Golang-ChatGPT-linebot-Render/blob/main/README_tw.md)<br>
-### [日本語](https://github.com/pyfbsdk59/Golang-ChatGPT-linebot-Render/blob/main/README_jp.md)
+### [繁體中文](https://github.com/pyfbsdk59/Golang-ChatGPT3.5-linebot-Render/blob/main/README_tw.md)<br>
+### [日本語](https://github.com/pyfbsdk59/Golang-ChatGPT3.5-linebot-Render/blob/main/README_jp.md)
 
 
 #### 1. This project refers to the following ones and official docs below.
