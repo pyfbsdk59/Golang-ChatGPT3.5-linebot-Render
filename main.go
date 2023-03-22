@@ -11,12 +11,12 @@ import (
 	openai "github.com/sashabaranov/go-openai"
 )
 
-func getChatGPTresponse(ctx context.Context, question string) string {
+func getChatGPTresponse(question string) string {
 
 	c := openai.NewClient(os.Getenv("OPENAI_TOKEN"))
 
 	resp, err := c.CreateChatCompletion(
-		//context.Background(),
+		context.Background(),
 		openai.ChatCompletionRequest{
 			Model: openai.GPT3Dot5Turbo,
 			Messages: []openai.ChatCompletionMessage{
@@ -39,7 +39,7 @@ func getChatGPTresponse(ctx context.Context, question string) string {
 }
 
 func main() {
-	ctx := context.Background()
+	//ctx := context.Background()
 	bot, err := linebot.New(
 		os.Getenv("CHANNEL_SECRET"),
 		os.Getenv("CHANNEL_TOKEN"),
@@ -63,7 +63,7 @@ func main() {
 			if event.Type == linebot.EventTypeMessage {
 				switch message := event.Message.(type) {
 				case *linebot.TextMessage: //message.Text refers to the text users typed in; ctx has to be passed down to the function
-					if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(getChatGPTresponse(ctx, message.Text))).Do(); err != nil {
+					if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(getChatGPTresponse(message.Text))).Do(); err != nil {
 						log.Print(err)
 					}
 				case *linebot.StickerMessage:
