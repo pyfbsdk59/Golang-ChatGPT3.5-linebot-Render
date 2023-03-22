@@ -1,5 +1,5 @@
 # Golang-ChatGPT3.5-linebot-Render
-# 一個Golang ChatGPT linebot專案，快速建置於平台Render。
+# 一個Golang ChatGPT/GPT3.5 turbo linebot專案，快速建置於平台Render。
 
 
 ### [English](https://github.com/pyfbsdk59/Golang-ChatGPT3.5-linebot-Render/blob/main/README.md)
